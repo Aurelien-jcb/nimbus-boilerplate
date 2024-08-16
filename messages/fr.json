@@ -1,0 +1,123 @@
+{
+  "Landing": {
+    "navigation": {
+      "signin": "Se connecter",
+      "dashboard": "Tableau de bord"
+    },
+    "header": {
+      "title": "Boostez votre Développement avec Nimbus Boilerplate",
+      "welcome": "Bienvenue sur Nimbus Boilerplate, votre solution tout-en-un pour démarrer rapidement vos projets web modernes avec Next.js, Auth.js, Shadcn UI, et plus encore."
+    },
+    "whyChoose": {
+      "title": "Pourquoi choisir Nimbus Boilerplate ?",
+      "features": {
+        "readyToUse": {
+          "label": "Prêt à l'Emploi :",
+          "description": "Commencez vos projets en un rien de temps avec une configuration initiale robuste."
+        },
+        "authIntegrated": {
+          "label": "Auth.js Intégré :",
+          "description": "Authentification sécurisée avec des fournisseurs populaires comme Google et GitHub."
+        },
+        "modernUI": {
+          "label": "Interface Moderne : ",
+          "description": "Utilisez Shadcn UI pour des composants élégants et réactifs."
+        },
+        "multilingual": {
+          "label": "Multilingue :  ",
+          "description": "Prise en charge facile du multilingue avec Next-intl."
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "Comment ça marche ?",
+      "description": "Commencez vos projets en un rien de temps avec une configuration initiale robuste.",
+      "steps": [
+        {
+          "label": "Installation Rapide",
+          "description": "Clonez le dépôt et suivez les instructions pour installer les dépendances."
+        },
+        {
+          "label": "Configuration Simple",
+          "description": "Personnalisez votre projet avec des fichiers de configuration clairs et bien documentés."
+        },
+        {
+          "label": "Déploiement Facile",
+          "description": "Déployez votre application sur Vercel, Netlify, ou votre plateforme préférée."
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Témoignages",
+      "quotes": [
+        {
+          "text": "\"Nimbus Boilerplate m'a permis de gagner un temps précieux sur mes projets. L'intégration de l'authentification et des composants UI est un vrai plus !\"",
+          "author": "Jean Dupont, Développeur Frontend"
+        },
+        {
+          "text": "\"Une solution complète pour démarrer rapidement avec Next.js. Je recommande vivement !\"",
+          "author": "Marie Curie, Ingénieure Logiciel"
+        }
+      ]
+    },
+    "community": {
+      "title": "Rejoignez la Communauté",
+      "description": "Partagez vos idées, posez vos questions et collaborez avec d'autres développeurs sur notre Discord et GitHub."
+    },
+    "getStarted": {
+      "title": "Démarrez Maintenant",
+      "description": "Prêt à booster votre développement ? Téléchargez Nimbus Boilerplate et commencez dès aujourd'hui !"
+    }
+  },
+  "AppLayout": {
+    "home": "Accueil",
+    "signin": "Se connecter",
+    "logout": "Déconnexion",
+    "profile": "Profile",
+    "settings": "Gérer le compte"
+  },
+  "HomePage": {
+    "title": "Accueil"
+  },
+  "Dashboard": {
+    "welcomeTitle": "Bonjour, ",
+    "Overviews": {
+      "title": "Vue d'ensemble"
+    },
+    "Analytics": {
+      "title": "Analyse"
+    },
+    "DashboardNavigation": {
+      "dashboard": "Tableau de bord",
+      "users": "Utilisateurs",
+      "settings": "Paramètres",
+      "logout": "Déconnexion"
+    }
+  },
+  "LocaleSwitcher": {
+    "fr": "Français",
+    "en": "Anglais",
+    "label": "Langage"
+  },
+  "LoginPage": {
+    "credentials": "Credentials: jane@doe.com / next-intl",
+    "email": "Email",
+    "invalidCredentials": "Please check your credentials.",
+    "invalidEmail": "Please enter a valid email address.",
+    "invalidPassword": "Please enter a password.",
+    "password": "Mot de passe",
+    "login": "Connexion",
+    "loginGoogle": "Se connecter avec Google",
+    "loginGithub": "Se connecter avec Github",
+    "title": "Heureux de vous revoir",
+    "loading": "Chargement",
+    "description": "Connectez-vous avec votre compte Google ou Github pour accéder au Dashboard."
+  },
+  "UserPage": {
+    "title": "User",
+    "UserNavigation": {
+      "settings": "Paramètres du profil",
+      "logout": "Déconnexion"
+    }
+  }
+}

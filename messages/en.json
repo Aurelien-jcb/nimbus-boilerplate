@@ -1,0 +1,123 @@
+{
+  "Landing": {
+    "navigation": {
+      "signin": "Sign In",
+      "dashboard": "Dashboard"
+    },
+    "header": {
+      "title": "Boost Your Development with Nimbus Boilerplate",
+      "welcome": "Welcome to Nimbus Boilerplate, your all-in-one solution to quickly start your modern web projects with Next.js, Auth.js, Shadcn UI, and more."
+    },
+    "whyChoose": {
+      "title": "Why Choose Nimbus Boilerplate?",
+      "features": {
+        "readyToUse": {
+          "label": "Ready to Use :",
+          "description": " Start your projects in no time with a robust initial setup."
+        },
+        "authIntegrated": {
+          "label": "Auth.js Integrated :",
+          "description": " Secure authentication with popular providers like Google and GitHub."
+        },
+        "modernUI": {
+          "label": "Modern UI :",
+          "description": "Use Shadcn UI for sleek and responsive components."
+        },
+        "multilingual": {
+          "label": "Multilingual :",
+          "description": "Easy multilingual support with Next-intl."
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "description": "Get your projects up and running in no time, thanks to a robust initial configuration.",
+      "steps": [
+        {
+          "label": "Quick Installation",
+          "description": "Clone the repository and follow the instructions to install dependencies."
+        },
+        {
+          "label": "Simple Configuration",
+          "description": "Customize your project with clear and well-documented configuration files."
+        },
+        {
+          "label": "Easy Deployment",
+          "description": "Deploy your application on Vercel, Netlify, or your preferred platform."
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Testimonials",
+      "quotes": [
+        {
+          "text": "\"Nimbus Boilerplate saved me valuable time on my projects. The integration of authentication and UI components is a real plus!\"",
+          "author": "Jean Dupont, Frontend Developer"
+        },
+        {
+          "text": "\"A complete solution to quickly start with Next.js. I highly recommend it!\"",
+          "author": "Marie Curie, Software Engineer"
+        }
+      ]
+    },
+    "community": {
+      "title": "Join the Community",
+      "description": "Share your ideas, ask questions, and collaborate with other developers on our Discord and GitHub."
+    },
+    "getStarted": {
+      "title": "Get Started Now",
+      "description": "Ready to boost your development? Download Nimbus Boilerplate and start today!"
+    }
+  },
+  "AppLayout": {
+    "home": "Home",
+    "signin": "Sign In",
+    "logout": "Logout",
+    "profile": "Profile",
+    "settings": "Manage account"
+  },
+  "HomePage": {
+    "title": "Home"
+  },
+  "Dashboard": {
+    "welcomeTitle": "Hello, ",
+    "Overviews": {
+      "title": "Vue d'ensemble"
+    },
+    "Analytics": {
+      "title": "Analytics"
+    },
+    "DashboardNavigation": {
+      "dashboard": "Dashboard",
+      "users": "Users",
+      "settings": "Settings",
+      "logout": "Logout"
+    }
+  },
+  "LocaleSwitcher": {
+    "fr": "French",
+    "en": "English",
+    "label": "Language"
+  },
+  "LoginPage": {
+    "credentials": "Credentials: jane@doe.com / next-intl",
+    "email": "Email",
+    "invalidCredentials": "Please check your credentials.",
+    "invalidEmail": "Please enter a valid email address.",
+    "invalidPassword": "Please enter a password.",
+    "password": "Password",
+    "login": "Sign in",
+    "loginGoogle": "Sign in with google",
+    "loginGithub": "Sign in with Github",
+    "title": "Welcome back",
+    "loading": "Loading",
+    "description": "Sign in with your preferred social account."
+  },
+  "UserPage": {
+    "title": "User",
+    "UserNavigation": {
+      "settings": "User settings",
+      "logout": "Log Out"
+    }
+  }
+}
