@@ -43,7 +43,7 @@ model Session {
 enum Roles {
   admin
   superadmin
-  member
+  user
 }
 
 model User {
@@ -52,7 +52,7 @@ model User {
   email         String?   @unique
   emailVerified DateTime?
   image         String?
-  role          Roles     @default(member)
+  role          Roles     @default(user)
   accounts      Account[]
   sessions      Session[]
 

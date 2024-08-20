@@ -22,6 +22,7 @@ import { createOrUpdateUser } from "@/server/actions/user";
 import { UserFormProps } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Trash } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -32,7 +33,7 @@ const userSchema = z.object({
   id: z.string().optional(),
   name: z.string().min(3, { message: "Name must be at least 3 characters" }),
   email: z.string().email({ message: "Invalid email address" }),
-  role: z.enum(["admin", "superadmin", "member"], {
+  role: z.enum(["admin", "superadmin", "user"], {
     message: "Please select a valid role",
   }),
 });
@@ -43,8 +44,9 @@ export const UserForm: React.FC<UserFormProps> = ({ initialData, roles }) => {
   const router = useRouter();
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
-  const title = initialData ? "Edit User" : "Create User";
-  const description = initialData ? "Edit a user." : "Add a new user";
+  const t = useTranslations("UserPage");
+  const title = initialData ? t("edit.title") : t("create.title");
+  const description = initialData ? t("edit.subtitle") : t("create.subtitle");
   const toastMessage = initialData ? "User updated." : "User created.";
   const action = initialData ? "Save changes" : "Create";
   const form = useForm<UserFormValues>({
@@ -54,12 +56,12 @@ export const UserForm: React.FC<UserFormProps> = ({ initialData, roles }) => {
           id: initialData.id,
           name: initialData.name || "",
           email: initialData.email || "",
-          role: initialData.role || "member",
+          role: initialData.role || "user",
         }
       : {
           name: "",
           email: "",
-          role: "member",
+          role: "user",
         },
   });
 

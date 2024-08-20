@@ -6,7 +6,7 @@ export function useUserRole() {
 
   const isSuperAdmin = userRole === "superadmin";
   const isAdmin = userRole === "admin";
-  const isUser = userRole === "member";
+  const isUser = userRole === "user";
 
   return {
     isSuperAdmin,

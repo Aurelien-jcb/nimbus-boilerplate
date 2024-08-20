@@ -17,7 +17,7 @@ export interface User {
   email: string | null;
   emailVerified: Date | null;
   image: string | null;
-  role: "admin" | "superadmin" | "member";
+  role: "admin" | "superadmin" | "user";
 }
 
 export interface NavItemWithChildren extends NavItem {

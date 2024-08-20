@@ -122,11 +122,19 @@
       "settings": "Paramètres du profil",
       "logout": "Déconnexion"
     },
+    "edit": {
+      "title": "Modifier",
+      "subtitle": "Modifier un utilisateur"
+    },
+    "create": {
+      "title": "Créer",
+      "subtitle": "Créer un utilisateur"
+    },
     "breadcrumbs": {
       "dashboard": "Tableau de bord",
       "users": "Utilisateurs",
       "create": "Créer",
-      "update": "Mettre à  jour"
+      "update": "Modifier"
     },
     "table": {
       "searchKey": "Rechercher un utilisateur...",

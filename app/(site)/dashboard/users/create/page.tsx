@@ -31,16 +31,11 @@ import { BreadcrumbItem } from "@/types";
 
 // import Form from "@/app/ui/invoices/edit-form";
 
-import { fetchUserById, fetchUserRoles } from "@/server/actions/user";
+import { fetchUserRoles } from "@/server/actions/user";
 import { getTranslations } from "next-intl/server";
-import { notFound } from "next/navigation";
 
-export default async function Page({ params }: { params: { id: string } }) {
-  const id = params.id;
-  const [user, roles] = await Promise.all([
-    fetchUserById(id),
-    fetchUserRoles(),
-  ]);
+export default async function Page() {
+  const [roles] = await Promise.all([fetchUserRoles()]);
 
   const t = await getTranslations("UserPage");
 
@@ -48,18 +43,16 @@ export default async function Page({ params }: { params: { id: string } }) {
     { title: t("breadcrumbs.dashboard"), link: "/dashboard" },
     { title: t("breadcrumbs.users"), link: "/dashboard/users" },
     {
-      title: t("breadcrumbs.update"),
-      link: `/dashboard/users/${id}/edit`,
+      title: t("breadcrumbs.create"),
+      link: `/dashboard/users/create`,
     },
   ];
-  if (!user) {
-    notFound();
-  }
+
   return (
     <PageContainer scrollable={true}>
       <div className="space-y-4">
         <Breadcrumbs items={breadcrumbItems} />
-        <UserForm initialData={user} roles={roles} />
+        <UserForm initialData={null} roles={roles} />
       </div>
     </PageContainer>
   );
