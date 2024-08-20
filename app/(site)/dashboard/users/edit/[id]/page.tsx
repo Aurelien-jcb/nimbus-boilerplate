@@ -49,7 +49,7 @@ export default async function Page({ params }: { params: { id: string } }) {
     { title: t("breadcrumbs.users"), link: "/dashboard/users" },
     {
       title: t("breadcrumbs.update"),
-      link: `/dashboard/users/${id}/edit`,
+      link: `/dashboard/users/edit/${id}`,
     },
   ];
   if (!user) {

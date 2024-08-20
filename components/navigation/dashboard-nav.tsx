@@ -26,7 +26,7 @@ export function DashboardNav({
   setOpen,
   isMobileNav = false,
 }: DashboardNavProps) {
-  const path = usePathname();
+  const path = usePathname(); // Assurez-vous que ce hook est utilisé dans un composant client
   const { isMinimized } = useSidebar();
   const { isSuperAdmin, isAdmin, isUser } = useUserRole();
 
@@ -66,7 +66,7 @@ export function DashboardNav({
                   </button>
                 ) : (
                   <Link
-                    href={item.href || "#"} // Utiliser une valeur par défaut si href est undefined
+                    href={item.href || "#"}
                     className={cn(
                       "flex items-center gap-2 overflow-hidden rounded-md py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground",
                       path === item.href ? "bg-accent" : "transparent",

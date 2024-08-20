@@ -196,7 +196,11 @@ export const products = [
   },
 ];
 
-export const roles: Role[] = [{ id: "admin" }, { id: "user" }];
+export const roles: Role[] = [
+  { id: "admin" },
+  { id: "superadmin" },
+  { id: "user" },
+];
 
 export const adminNavItems: NavItem[] = [
   {

@@ -1,3 +1,4 @@
+import { Toaster } from "@/components/ui/toaster";
 import meta from "@/lib/meta";
 import Providers from "@/providers/providers";
 import { getLocale } from "next-intl/server";
@@ -22,6 +23,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={inter.className}>
         <Providers>{children}</Providers>
+        <Toaster />
       </body>
     </html>
   );
