@@ -16,6 +16,20 @@ export async function fetchUserById(id: string): Promise<User | null> {
   }
 }
 
+export async function deleteUserById(
+  id: string,
+): Promise<{ success: boolean; error?: string }> {
+  try {
+    await prisma.user.delete({
+      where: { id },
+    });
+    return { success: true };
+  } catch (error) {
+    console.error("Failed to delete user:", error);
+    return { success: false, error: "Failed to delete user" };
+  }
+}
+
 export async function createOrUpdateUser(data: {
   id?: string;
   name: string;

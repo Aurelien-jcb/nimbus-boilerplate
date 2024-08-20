@@ -1,5 +1,7 @@
 "use client";
 
+import { AlertModal } from "@/components/modal/alert-modal";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -7,9 +9,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
-import { AlertModal } from "@/components/modal/alert-modal";
-import { Button } from "@/components/ui/button";
+import { toast } from "@/components/ui/use-toast";
+import { deleteUserById } from "@/server/actions/user";
 import { User } from "@/types";
 import { Edit, MoreHorizontal, Trash } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -24,7 +25,31 @@ export const CellAction: React.FC<CellActionProps> = ({ data }) => {
   const [open, setOpen] = useState(false);
   const router = useRouter();
 
-  const onConfirm = async () => {};
+  const onConfirm = async () => {
+    setLoading(true);
+    try {
+      const result = await deleteUserById(data.id);
+
+      if (result.success) {
+        toast({
+          title: "User Deleted",
+          description: "The user has been successfully deleted.",
+        });
+        router.push("/dashboard/users");
+      } else {
+        throw new Error(result.error);
+      }
+    } catch (error: any) {
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: error.message || "Failed to delete user.",
+      });
+    } finally {
+      setLoading(false);
+      setOpen(false);
+    }
+  };
 
   return (
     <>
