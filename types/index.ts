@@ -49,6 +49,15 @@ export interface UserFormProps {
   roles: Role[];
 }
 
+export interface TableTranslations {
+  title: string;
+  description: string;
+  userCreateButton: string;
+  table: {
+    searchKey: string;
+  };
+}
+
 export type MainNavItem = NavItemWithOptionalChildren;
 
 export type SidebarNavItem = NavItemWithChildren;

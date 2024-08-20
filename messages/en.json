@@ -114,10 +114,27 @@
     "description": "Sign in with your preferred social account."
   },
   "UserPage": {
-    "title": "User",
+    "title": "Users",
+    "description": "Manage users",
+    "userCreateButton": "Add new",
+    "userUpdateButton": "Update",
     "UserNavigation": {
       "settings": "User settings",
       "logout": "Log Out"
+    },
+    "breadcrumbs": {
+      "dashboard": "Dashboard",
+      "users": "Users",
+      "create": "Create",
+      "update": "Update"
+    },
+    "table": {
+      "searchKey": "Search user...",
+      "columns": {
+        "name": "Name",
+        "email": "Email",
+        "role": "Role"
+      }
     }
   }
 }

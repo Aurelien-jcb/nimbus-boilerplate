@@ -47,7 +47,6 @@ export const UserForm: React.FC<UserFormProps> = ({ initialData, roles }) => {
   const description = initialData ? "Edit a user." : "Add a new user";
   const toastMessage = initialData ? "User updated." : "User created.";
   const action = initialData ? "Save changes" : "Create";
-
   const form = useForm<UserFormValues>({
     resolver: zodResolver(userSchema),
     defaultValues: initialData

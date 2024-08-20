@@ -1,4 +1,4 @@
-import { NavItem } from "@/types";
+import { NavItem, Role } from "@/types";
 import { signOut } from "next-auth/react";
 
 // export const users: User[] = [
@@ -99,6 +99,7 @@ export type Employee = {
   job: string;
   profile_picture?: string | null; // Profile picture can be a string (URL) or null (if no picture)
 };
+
 export const products = [
   {
     title: "Moonbeam",
@@ -194,6 +195,8 @@ export const products = [
       "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
   },
 ];
+
+export const roles: Role[] = [{ id: "admin" }, { id: "user" }];
 
 export const adminNavItems: NavItem[] = [
   {

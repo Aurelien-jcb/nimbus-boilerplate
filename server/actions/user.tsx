@@ -1,9 +1,10 @@
 "use server";
 
+import { roles } from "@/constants/data";
 import prisma from "@/lib/prisma.db";
 import { Roles, User } from "@prisma/client";
 
-export async function fetchUserData(id: string): Promise<User | null> {
+export async function fetchUserById(id: string): Promise<User | null> {
   try {
     const user = await prisma.user.findUnique({
       where: { id },
@@ -53,6 +54,15 @@ export async function fetchAllUsers() {
   try {
     const users = await prisma.user.findMany();
     return users;
+  } catch (error) {
+    console.error("Failed to fetch users:", error);
+    return [];
+  }
+}
+
+export async function fetchUserRoles() {
+  try {
+    return roles;
   } catch (error) {
     console.error("Failed to fetch users:", error);
     return [];

@@ -114,10 +114,27 @@
     "description": "Connectez-vous avec votre compte Google ou Github pour accéder au Dashboard."
   },
   "UserPage": {
-    "title": "User",
+    "title": "Utilisateurs",
+    "description": "Gérer les utilisateurs",
+    "userCreateButton": "Ajouter un utilisateur",
+    "userUpdateButton": "Mettre à jour",
     "UserNavigation": {
       "settings": "Paramètres du profil",
       "logout": "Déconnexion"
+    },
+    "breadcrumbs": {
+      "dashboard": "Tableau de bord",
+      "users": "Utilisateurs",
+      "create": "Créer",
+      "update": "Mettre à  jour"
+    },
+    "table": {
+      "searchKey": "Rechercher un utilisateur...",
+      "columns": {
+        "name": "Nom",
+        "email": "Email",
+        "role": "Rôle"
+      }
     }
   }
 }
