@@ -16,6 +16,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { TableTranslations } from "@/types";
+import { useTranslations } from "next-intl";
 import { Button } from "./button";
 import { Input } from "./input";
 import { ScrollArea, ScrollBar } from "./scroll-area";
@@ -25,6 +27,7 @@ interface DataTableProps<TData, TValue> {
   data: TData[];
   searchKey: string;
   placheHolder?: string;
+  translations?: TableTranslations;
 }
 
 export function DataTable<TData, TValue>({
@@ -39,10 +42,10 @@ export function DataTable<TData, TValue>({
     getCoreRowModel: getCoreRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
   });
+  const t = useTranslations("Table");
 
   /* this can be used to get the selectedrows 
   console.log("value", table.getFilteredSelectedRowModel()); */
-
   return (
     <>
       <Input
@@ -96,7 +99,7 @@ export function DataTable<TData, TValue>({
                   colSpan={columns.length}
                   className="h-24 text-center"
                 >
-                  No results.
+                  {t("noResult")}
                 </TableCell>
               </TableRow>
             )}
@@ -106,8 +109,10 @@ export function DataTable<TData, TValue>({
       </ScrollArea>
       <div className="flex items-center justify-end space-x-2 py-4">
         <div className="flex-1 text-sm text-muted-foreground">
-          {table.getFilteredSelectedRowModel().rows.length} of{" "}
-          {table.getFilteredRowModel().rows.length} row(s) selected.
+          {t("paginationLength", {
+            item: table.getFilteredSelectedRowModel().rows.length,
+            length: table.getFilteredRowModel().rows.length,
+          })}
         </div>
         <div className="space-x-2">
           <Button
@@ -116,7 +121,7 @@ export function DataTable<TData, TValue>({
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
           >
-            Previous
+            {t("paginationPrevious")}
           </Button>
           <Button
             variant="outline"
@@ -124,7 +129,7 @@ export function DataTable<TData, TValue>({
             onClick={() => table.nextPage()}
             disabled={!table.getCanNextPage()}
           >
-            Next
+            {t("paginationNext")}
           </Button>
         </div>
       </div>

@@ -144,5 +144,15 @@
         "role": "Rôle"
       }
     }
+  },
+  "Table": {
+    "paginationPrevious": "Précédent",
+    "paginationNext": "Suivant",
+    "noResult": "Aucun élément trouvé.",
+    "actions": {
+      "delete": "Supprimer",
+      "update": "Modifier"
+    },
+    "paginationLength": "{item} sur {length} ligne(s) sélectionnée(s)."
   }
 }

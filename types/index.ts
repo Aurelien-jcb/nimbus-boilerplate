@@ -52,7 +52,7 @@ export interface UserFormProps {
 export interface TableTranslations {
   title: string;
   description: string;
-  userCreateButton: string;
+  button: string;
   table: {
     searchKey: string;
   };

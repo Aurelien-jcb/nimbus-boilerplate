@@ -136,5 +136,15 @@
         "role": "Role"
       }
     }
+  },
+  "Table": {
+    "paginationPrevious": "Previous",
+    "paginationNext": "Next",
+    "noResult": "No result.",
+    "actions": {
+      "delete": "Delete",
+      "update": "Update"
+    },
+    "paginationLength": "{item} of {length} row(s) selected."
   }
 }

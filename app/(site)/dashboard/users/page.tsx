@@ -12,7 +12,7 @@ export default async function Page() {
   const translations = {
     title: t("title"),
     description: t("description"),
-    userCreateButton: t("userCreateButton"),
+    button: t("userCreateButton"),
     table: {
       searchKey: t("table.searchKey"),
     },

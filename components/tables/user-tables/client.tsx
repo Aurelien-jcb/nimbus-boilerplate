@@ -29,7 +29,7 @@ export default function UserClient({ users, translations }: UserClientProps) {
           className={buttonVariants({ variant: "default" })}
         >
           <Icons.plus className="mr-2 h-4 w-4" />
-          {translations.userCreateButton}
+          {translations.button}
         </Link>
       </div>
       <Separator />
